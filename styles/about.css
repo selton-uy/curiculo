@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&family=Poppins&display=swap');
+
+@keyframes swing-in-top-bck {
+    0% {
+        transform: rotateX(70deg);
+        transform-origin: top;
+        opacity: 0
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1
+    }
+}
+
+:root {
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+    --cor-primaria: #053B50;
+    --cor-secundaria: #EEEEEE;
+    --cor-terciaria: #176B87;
+    --cor-hover: #0a3b4f;
+    --cor-da-borda: #22d4fd;
+}
+
+body {
+    background-image: linear-gradient(var(--cor-primaria), #000000);
+    box-sizing: border-box;
+    color: var(--cor-secundaria);
+
+}
+
+.cabecalho {
+    padding: 2% 3%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 5rem;
+    padding-bottom: 5%;
+
+}
+
+.cabecalho__menu__link {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.cabecalho__menu__link:hover {
+    font-size: 1.25rem;
+    transition: 1s;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    padding: 6%;
+}
+
+.apresentacao__titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 4.68rem;
+    padding-bottom: 5%;
+}
+
+.destaque {
+    color: var(--cor-da-borda);
+}
+
+.apresentacao__texto {
+    font-family: var(--fonte-texto);
+    padding-top: 2%;
+    font-size: 1.5rem;
+
+}
+
+.swing-in-top-bck {
+    animation: swing-in-top-bck 1s cubic-bezier(.175, .885, .32, 1.275) both
+}
+.foto{
+    border: inset 0.6rem;
+    border-color: var(--cor-da-borda);
+    border-radius: 6.25rem;
+    height: 90vh;
+    margin-right: 10vw;
+}
+.link {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    font-family: var(--fonte-texto);
+    font-size: 1.5rem;
+}
+
+.links {
+    border: solid;
+    border-color: var(--cor-da-borda);
+    color: var(--cor-secundaria);
+    padding: 2% 5%;
+}
+
+.links:hover {
+    color: #000000;
+    background-color: #F5F5F5;
+    font-weight: 600;
+    border-color: white;
+    transition: 1s;
+}
+
+@media(max-width: 1200px) {
+    .cabecalho {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__titulo {
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    .swing-in-top-bck {
+        height: 30vh;
+
+    }
+}

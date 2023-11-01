@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&family=Poppins&display=swap');
+:root{
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto:'Montserrat', sans-serif;
+    --cor-primaria:#053B50;
+    --cor-secundaria: #EEEEEE;
+    --cor-terciaria:#176B87;
+    --cor-hover:#0a3b4f;
+}
+body{
+    background-image: linear-gradient(var(--cor-primaria), #000000);
+    box-sizing: border-box;
+    color:var(--cor-secundaria);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cabecalho{
+    padding:2% 3% 3% ;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 5rem;
+}
+.cabecalho__menu__link{
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.cabecalho__menu__link:hover{
+    font-size: 1.25rem ;
+    transition: 1s;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 5%;
+    margin-bottom: 4%;
+    flex-grow: 1;
+}
+.apresentacao__titulo{
+
+    font-family: var(--fonte-titulo);
+    font-size: 4.9rem;
+}
+
+.apresentacao__subtitulo{
+    font-family: var(--fonte-texto);
+    font-size: 22px;
+    font-weight: 300;
+    padding: 2% 0;
+}
+.apresentacao__foto{
+    padding: 2% 0 5%;
+}
+.apresentacao__conteudo__foto{
+    border: inset 10px;
+    border-radius: 60px;
+    border-color: #22d4fd;
+}
+
+.apresentacao__link{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    
+}
+.apresentacao__link__link{
+    display: flex;
+    justify-content: center;
+    
+
+    border: solid 2px;
+    border-color: var(--cor-terciaria);
+
+    width: 278px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    color: var(--cor-secundaria);
+}
+.apresentacao__link__link:hover{
+    background-color: var(--cor-hover);
+    color: #F6F6F6;
+    font-size: 25px;
+    transition: 1s;
+}
+.logo{
+    width: 30px;
+    height: 30px;
+    padding-right: 5%;
+}
+
+@media (max-width: 1200px) {
+    .apresentacao{
+        height: 100%;
+    }
+
+    .apresentacao__titulo{
+        font-size: 3rem;
+        text-align: center;
+        padding: 10%;
+    }
+    .apresentacao__link{
+        flex-direction: column;
+        padding: 10%;
+    }
+    .apresentacao__foto{
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+    }
+    .apresentacao__conteudo__foto{
+        width: 50%;
+    }
+}
